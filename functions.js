@@ -1,27 +1,25 @@
-/**
- * greet(name):
- * - receives a name
- * - logs "Hello <name>"
- *
- * e.g.
- * greet("Hamza") logs "Hello Hamza"
- */
+const greetings = "Hello";
+
 function greet(name) {
-  // Your code here
+  console.log(`${greetings} ${name}`);
+  return name;
 }
 
-/**
- * isOdd(n):
- * - receives a number n
- * - returns true if it's odd, false otherwise
- *
- * e.g.
- * isOdd(7) -> true
- * isOdd(10) -> false
- */
+greet("Khaled");
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function isOdd(n) {
-  // Your code here
+  if (n % 2 === 1) {
+    // If there is a remainder then its odd
+    return true;
+  } else {
+    // If there is no remainder left then its even
+    return false;
+  }
 }
+
+console.log(isOdd(17));
 
 /**
  * oddsSmallerThan(n):
@@ -33,21 +31,27 @@ function isOdd(n) {
  * oddsSmallerThan(15) -> 7
  */
 function oddsSmallerThan(n) {
-  // Your code here
+  if (n % 2 === 1) {
+    return Math.floor(n / 2);
+  } else {
+    return n / 2;
+  }
 }
 
-/**
- * squareOrDouble(n):
- * - receives a number n
- * - returns its square if it's odd
- * - returns its double if it's even
- *
- * e.g.
- * squareOrDouble(16) -> 32
- * squareOrDouble(9) -> 81
- */
+console.log(oddsSmallerThan(10));
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function squareOrDouble(n) {
-  // Your code here
+  if (n % 2 === 1) {
+    return Math.pow(n, 2);
+    // or
+    // console.log(n * n);
+  } else {
+    return n * 2;
+  }
 }
+
+console.log(squareOrDouble(8));
 
 module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
